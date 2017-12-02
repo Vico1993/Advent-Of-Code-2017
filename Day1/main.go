@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"strconv"
@@ -40,5 +41,17 @@ func main() {
 		}
 	}
 
-	println(num)
+	fmt.Println("Part1:", num)
+
+	// Part 2
+	num = 0
+	list := append(AInt, AInt...)
+	for i, d := range AInt {
+		if d == list[i+len(AInt)/2] {
+			num += d
+		}
+	}
+
+	fmt.Println("Part2:", num)
+
 }
