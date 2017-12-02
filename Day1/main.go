@@ -26,7 +26,19 @@ func main() {
 
 	// Convert Bytes to String
 	dataStr := string(data[:])
-	Array := parseToInt(dataStr)
+	// Convert String to Array []Int
+	AInt := parseToInt(dataStr)
 
-	println(len(Array))
+	var num int
+	for i := range AInt {
+		next := 0
+		if i+1 < len(AInt) {
+			next = i + 1
+		}
+		if AInt[i] == AInt[next] {
+			num += AInt[i]
+		}
+	}
+
+	println(num)
 }
