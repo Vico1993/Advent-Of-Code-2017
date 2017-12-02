@@ -29,13 +29,12 @@ func main() {
 	file, _ := os.Open("input.txt")
 	fscanner := bufio.NewScanner(file)
 
-	var sum = 0
+	var CheckSumPart1 = 0
 	for fscanner.Scan() {
 		var min = 999999999
 		var max = 0
 
 		var line = splitStringInToInt(fscanner.Text())
-		fmt.Println("for the line: ", line)
 		for _, v := range line {
 			if v <= min {
 				min = v
@@ -46,12 +45,8 @@ func main() {
 			}
 		}
 
-		fmt.Println("Max:", max)
-		fmt.Println("Min:", min)
-		fmt.Println("Sum Before:", sum)
-		sum += max - min
-		fmt.Println("Sum After:", sum)
+		CheckSumPart1 += max - min
 	}
 
-	fmt.Println("sum:", sum)
+	fmt.Println("CheckSumPart1 PART 1:", CheckSumPart1)
 }
