@@ -13,7 +13,7 @@ func parseToInt(s string) []int {
 		if err != nil {
 			log.Fatal("Error")
 		}
-		println(val)
+		digits[i] = val
 	}
 	return digits
 }
@@ -26,6 +26,7 @@ func main() {
 
 	// Convert Bytes to String
 	dataStr := string(data[:])
-	parseToInt(dataStr)
+	Array := parseToInt(dataStr)
 
+	println(len(Array))
 }
