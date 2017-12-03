@@ -24,8 +24,6 @@ func main() {
 		i += 2
 	}
 
-	fmt.Println("Num:", num)
-
 	// Distance between 1 and the carre of i
 	oneToCube := (i / 2)
 
@@ -45,5 +43,5 @@ func main() {
 	}
 
 	// Distance is oneToCube + min
-	fmt.Println("Disctance is : ", oneToCube+min)
+	fmt.Println("Disctance is : ", oneToCube+min, "For the num : ", num)
 }
